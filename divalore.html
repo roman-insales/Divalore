@@ -2,499 +2,1088 @@
 <html>
 
 <head>
-  <!-- meta -->
-  <meta charset="UTF-8" />
-  <meta name="keywords" content=''/>
-  <meta name="description" content=''/>
-  <meta name="robots" content="index,follow" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-  <title>nartist</title>
-  <!-- fixes -->
-  <!--[if IE]>
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta name="keywords" content='' />
+    <meta name="description" content='' />
+    <meta name="robots" content="index,follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <title>Divalore</title>
+    <!-- fixes -->
+    <!--[if IE]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
   <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   <![endif]-->
-  <link rel="stylesheet" type="text/css" href="divalore_files/all.css">
-  <link rel="stylesheet" type="text/css" href="divalore_files/spider.css"> 
-  <link rel="stylesheet" type="text/css" href="divalore_files/theme.css">
-  <link rel="stylesheet" type="text/css" href="divalore_files/divalore.css">
+    <link rel="stylesheet" type="text/css" href="divalore_files/normalise.css">
+    <link rel="stylesheet" type="text/css" href="divalore_files/all.css">
+    <link rel="stylesheet" type="text/css" href="divalore_files/spider.css">
+    <link rel="stylesheet" type="text/css" href="divalore_files/theme.css">
+    <link rel="stylesheet" type="text/css" href="divalore_files/swiper.css">
+    <link rel="stylesheet" type="text/css" href="divalore_files/divalore.css">
 </head>
+
 <body class="template-is-index is-index-page dom-ready window-load">
-  <header class="nartistHeader">
-    <div class="nartistHeader_container container_wide">
-      <div class="row is-grid flex-middle flex-between">
-        <div class="nartistHeader_left cell-6 text-left">
-          <a class="nartistHeader__logo inline-middle" href="/" title="nartist">
-            <img class="nartistHeader__logo_img" src="divalore_files/logo.png" alt="nartist" title="nartist">
-          </a>
-          <nav class="nartistHeader_nav">
-            <a class="nartistHeader_link" href="#">Каталог</a>
-            <a class="nartistHeader_link" href="#">О компании</a>
-            <a class="nartistHeader_link" href="#">Контакты</a>
-            <a class="nartistHeader_link" href="#">Блог</a>
-          </nav>
-        </div>
-
-        
-        <div class="nartistHeader_right cell-6 text-center">
-
-          <select name="select-box" id="language" class="select">
-            <option value="RU" name="value">RU</option>
-            <option value="EN" name="value">EN</option>
-          </select>
-          <span class="phonecall">
-            <a class="phonecall__number nartistHeader_link" href="tel:+7(800) 700 90 70" class="">
-              +7 800 700 90 70
-            </a>
-            <a class="phonecall__popup nartistHeader_link" href="#phone-popup">
-              Заказать звонок 
-            </a>
-          </span>
-          <div class="nartistHeader_icons">
-            <a href="/page/favorites" class="nartistHeader__icon favorites hide-sm">
-              <small data-favorites-counter="5" class="is-full">5</small>
-            </a>
-
-            <a href="/client_account/login" class="nartistHeader__icon login hide-sm">
-              <span class="icon-user-black white"></span>
-            </a>
-            
-            <div class="nartistHeader__icon search hide-sm">
-              <span class="icon-search-black white"></span>
-              <form action="/search" method="get" class="search_widget">
-              <div class="inpt-group">
-                <input type="text" autocomplete="off" class="inpt-control inpt search_widget-control" name="q" value="" placeholder="Поиск" data-search-field="" inprocess="false">
-                <button type="submit" class="bttn-prim inpt-group-addon search_widget-submit">
-                  <span class="icon-search-black white"></span>
-                </a>
-              </div>
-              <input type="hidden" name="lang" value="ru">
-              <div class="search_widget-result">
-                <div data-search-result="" class="search_widget-result-inner"></div>
-              </div>
-            </form>
-            
-            </div>
-            <div class="search_top_close"></div>
-            
-            <div class="nartistHeader__icon cart cart-widget drop">
-              <a href="/cart_items" class="cart-widget-link icon-basket-black white">
-                <span data-cartman-positions-count="" class="is-cart-empty"></span>
-              </a>
-              
-              <a href="/cart_items">
-                <div class="drop-target dynamic_basket-drop">
-                  <div class="dynamic_basket js-dynamic_basket">
-                    <div class="dynamic_basket-header">
-                      ваши покупки
-                    </div>
-                    <form action="/cart_items" method="post" data-ajax-cart="">
-                      <input type="hidden" name="_method" value="put">
-                      <input type="hidden" name="make_order" value="" class=" js-giftd-checkout-start  js-giftd-block-2 " data-giftd-block-id-checkout="2">
-                      <div class="dynamic_basket-list">
-                          <div class="dynamic_basket-empty text-center">
-                            Корзина пуста
-                          </div>
-                      </div>
-                    </form>
-                  </div>
+    <header class="divaloreHeader container_narrow">
+        <div class="row">
+            <div class="divaloreHeader__left-side">
+                <div class="currency">
+                    <select name="select-box" id="currency" class="select">
+                    <option value="RUB" name="value1">RUB (РУБ) </option>
+                    <option value="EUR" name="value1">EUR (ЕВРО) </option>
+                    <option value="USD" name="value1">USD (Долл) </option>
+                  </select>
                 </div>
-              </a>
+                <div class="location">
+                    <div class="location__title">Москва</div>
+                    <select name="select-box2" id="location_phone" class="select"> 
+                      <option value="location_phone" name="value2">+7 495 123 45 67</option>
+                      <option value="location_phone" name="value2">+7 495 123 45 67</option>
+                      <option value="location_phone" name="value2">+7 495 123 45 67</option>
+                    </select>
+                </div>
             </div>
-          </div>
+
+            <a class="divaloreHeader__logo cell-2 inline-middle" href="/" title="divalore">
+              di valore
+            </a>
+
+            <div class="divaloreHeader__icons">
+                <div class="divaloreHeader__icon search">
+                    <span class="icon-search-black white"></span>
+                    <form action="/search" method="get" class="search_widget">
+                        <div class="inpt-group">
+                            <input type="text" autocomplete="off" class="inpt-control inpt search_widget-control" name="q" value="" placeholder="Поиск" data-search-field="" inprocess="false">
+                            <button type="submit" class="bttn-prim inpt-group-addon search_widget-submit">
+                        <span class="icon-search-black white"></span> 
+                      </div>
+                      <input type="hidden" name="lang" value="ru">
+                      <div class="search_widget-result">
+                        <div data-search-result="" class="search_widget-result-inner"></div>
+                      </div>
+                    </form> 
+                </div>
+
+                <a href="/page/favorites" class="divaloreHeader__icon favorites hide-sm">
+                  <small data-favorites-counter="5" class="is-full">5</small>
+                </a>
+
+                <a href="/client_account/login" class="divaloreHeader__icon login hide-sm">
+                  <span class="icon-user-black white"></span>
+                </a>
+                
+                <div class="search__top-close"></div>
+                
+                <div class="divaloreHeader__icon cart cart-widget drop">  
+                  <a href="/cart_items">
+                    <div class="drop-target dynamic_basket-drop">
+                      <div class="dynamic_basket js-dynamic_basket">
+                        <div class="dynamic_basket-header">
+                          ваши покупки
+                        </div>
+                        <form action="/cart_items" method="post" data-ajax-cart="">
+                          <input type="hidden" name="_method" value="put">
+                          <input type="hidden" name="make_order" value="" class=" js-giftd-checkout-start  js-giftd-block-2 " data-giftd-block-id-checkout="2">
+                          <div class="dynamic_basket-list">
+                              <div class="dynamic_basket-empty text-center">
+                                Корзина пуста
+                              </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </a>
+                  <span class="cart_info"><b data-cartman-positions-count="">1</b> (18 000 р.)</span>
+
+                </div>
+            </div>
         </div>
-      
-        
-      </div>
-    </div>
+        <div class="divaloreHeader__mainnav">
+          <ul>
+            <li><a href="">костюмы и пиджаки</a></li>
+            <li><a href="">сорочки</a></li>
+            <li><a href="">верхняя одежда</a></li>
+            <li><a href="">обувь</a></li>
+            <li><a href="">аксессуары</a></li>
+            <li><a href="">услуги ателье</a></li>
+            <li><a href="">наше ателье</a></li>
+            <li><a href="">акции</a></li>
+            <li><a href="">отзывы</a></li>
+            <li><a href="">контакты</a></li>
+          </ul>
+        </div>
+
   </header>
 
   <section class="promo">
-    <div class="promo_container container_wide">
-      <nav class="promo__nav">
-        <ul class="promo_left cell-8 ">
-            
-              <li class="promo__nav_link">
-                <a class="bttn-underline" href="http://nartistpro.idbi.ru/collection/kategoriya-1">Жидкости и специальные средства</a> 
-                
-              </li>
-            
-              <li class="promo__nav_link">
-                <a class="bttn-underline" href="http://nartistpro.idbi.ru/collection/kategoriya-2">Базы и топы</a> 
-                
-              </li>
-            
-              <li class="promo__nav_link">
-                <a class="bttn-underline" href="http://nartistpro.idbi.ru/collection/modeliruyuschie-geli">Моделирующие гели</a> 
-                
-              </li>
-            
-              <li class="promo__nav_link">
-                <a class="bttn-underline" href="http://nartistpro.idbi.ru/collection/fartuki-aksessuary">Фартуки, аксессуары</a> 
-                
-              </li>
-            
-              <li class="promo__nav_link">
-                <a class="bttn-underline" href="http://nartistpro.idbi.ru/collection/pilki">Пилки</a> 
-                
-              </li>
-            
-              <li class="promo__nav_link">
-                <a class="bttn-underline" href="http://nartistpro.idbi.ru/collection/katalog-1-d0b8ba">Полигели</a> 
-                
-              </li>
-            
-              <li class="promo__nav_link">
-                <a class="bttn-underline" href="http://nartistpro.idbi.ru/collection/katalog-1-0dc69f">Гель краски</a> 
-                
-              </li>
-            
-    
-        </ul>
-        <ul class="promo_right cell-4 ">
-            <li class="promo__nav_link">Коллекции</li>
-            <li class="promo__nav_link">Скидки</li>
-            <li class="promo__nav_link">Новинки</li>
-        </ul>
-      </nav>
-      <div class="promo__grid">
-        <div class="promo__grid_onethird cell-4">
-          <div class="promo__grid_itemwrap" >
-            <a class="promo__grid_itemlink" href="#">
-            <img class="lazyload" 
-            src="divalore_files/promo1.jpg" 
-            data-src="divalore_files/promo1.jpg" 
-            data-srcset="idivalore_files/promo1.jpg 1x, divalore_files/promo1.jpg 2x" 
-            srcset="divalore_files/promo1.jpg 1x, divalore_files/promo1.jpg 2x" alt="" 
-            > 
-            </a>
-            
-            <div class="promo__grid_textwrap" >
-              <small>Будь в тренде</small>
-              <h2>Скидки до 40%
-                на базовые
-                покрытия</h2>
-              <a class="button" style="background-color: black; color: white">Подробнее</a>
-              <ul class="accompanying">
-                <li class="promo_link"><a href="#">Business Lady</a></li>
-                <li class="promo_link"><a href="#">Make-Up</a></li>
-                <li class="promo_link"><a href="#">Night shooters</a></li>
-                <li class="promo_link"><a href="#">Romantic Date</a></li>
-                <li class="promo_link"><a href="#">Aviator</a></li>
-              </ul>
-            </div>
-          </div>
-          
-        </div>
-        <div class="promo__grid_twothird cell-8">
-          
-          <div class="promo__grid_itemwrap">
-            <a class="promo__grid_itemlink" href="#">
-            <img class="lazyload" 
-            src="divalore_files/promo2.jpg" 
-            data-src="divalore_files/promo2.jpg" 
-            data-srcset="idivalore_files/promo2.jpg 1x, divalore_files/promo2.jpg 2x" 
-            srcset="divalore_files/promo2.jpg 1x, divalore_files/promo2.jpg 2x" alt="" 
-            >
-            </a>
-            <div class="promo__grid_textwrap">
-              <small>Сочные оттенки</small>
-              <h2>Mysterious 
-                India</h2>
-              <a class="button" style="background-color: #f9da42; color: black">Подробнее</a>
-            </div>
-          </div>
-          
-          <div class="promo__grid_itemwrap">
-            
-            <a class="promo__grid_itemlink" href="#">
-            <img class="lazyload" 
-            src="divalore_files/promo3.jpg" 
-            data-src="divalore_files/promo3.jpg" 
-            data-srcset="idivalore_files/promo3.jpg 1x, divalore_files/promo3.jpg 2x" 
-            srcset="divalore_files/promo3.jpg 1x, divalore_files/promo3.jpg 2x" alt="" 
-            >
-            </a>
-            <div class="promo__grid_textwrap">
-              <small>Сочные оттенки</small>
-              <h2>Натуральный
-                НЮД</h2>
-              <a class="button" style="background-color: #b67491; color: white">Подробнее</a>
-            </div>
-          </div>
-          
-          <div class="promo__grid_itemwrap">
-            
-            <a class="promo__grid_itemlink" href="#">
-            <img class="lazyload" 
-            src="divalore_files/promo4.jpg" 
-            data-src="divalore_files/promo4.jpg" 
-            data-srcset="idivalore_files/promo4.jpg 1x, divalore_files/promo4.jpg 2x" 
-            srcset="divalore_files/promo4.jpg 1x, divalore_files/promo4.jpg 2x" alt="" 
-            >
-            </a>
-            <div class="promo__grid_textwrap">
-              <small>Золото, серебро, блестки</small>
-              <h2>Арт
-                покрытия</h2>
-              <a class="button" style="background-color: #414d6a; color: white">Подробнее</a>
-            </div>
-          </div>
-          
-          <div class="promo__grid_itemwrap">
-            
-            <a class="promo__grid_itemlink" href="#">
-            <img class="lazyload" 
-            src="divalore_files/promo5.jpg" 
-            data-src="divalore_files/promo5.jpg" 
-            data-srcset="idivalore_files/promo5.jpg 1x, divalore_files/promo5.jpg 2x" 
-            srcset="divalore_files/promo5.jpg 1x, divalore_files/promo5.jpg 2x" alt="" 
-            >
-            </a>
-            <div class="promo__grid_textwrap" >
-              <small>Классика жанра</small>
-              <h2>Фрэнч</h2>
-              <a class="button" style="background-color: black; color: white">Подробнее</a>
-            </div>
-          </div>
+    <div class="promo__wrap container_narrow">
+    <div class="swiper-slider">  
 
-        </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="divalore_files/slide1.jpg" alt="">
+            <span class="text1">У вас никогда не будет второго шанса</span>
+            <span class="text2">произвести первое впечатление...</span>
+            <a href="" class="button1">узнать больше</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="divalore_files/slide1.jpg" alt="">
+            <span class="text1">У вас никогда не будет второго шанса</span>
+            <span class="text2">произвести первое впечатление...</span>
+            <a href="" class="button1">узнать больше</a>
+          </div> 
+          <div class="swiper-slide">
+            <img src="divalore_files/slide1.jpg" alt="">
+            <span class="text1">У вас никогда не будет второго шанса</span>
+            <span class="text2">произвести первое впечатление...</span>
+            <a href="" class="button1">узнать больше</a>
+          </div> 
+          <div class="swiper-slide">
+            <img src="divalore_files/slide1.jpg" alt="">
+            <span class="text1">У вас никогда не будет второго шанса</span>
+            <span class="text2">произвести первое впечатление...</span>
+            <a href="" class="button1">узнать больше</a>
+          </div>  
+        </div> 
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </div>
+
   </section>
 
-  <section class="collections">
-    <div class="collections_container container">
-        <div class="collections__more">
-            <h1 class="section_title">Коллекции</h1>
-            <span class="section_text">В нашем магазине вы найдете тщательно подобранные коллекции на любой вкус</span>
-            <ul class="collections__list row">
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem2.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Business Lady</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem3.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Make-Up</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem4.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Night Shooters</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem2.jpg" alt="" class="smallitem__img"><span class="smallitem__text"> Lights of Capitals</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem3.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Mirages</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem2.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Chocolatier</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem3.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Fire Lady</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem4.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Business Lady</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem2.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Make-Up</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem4.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Night Shooters</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem3.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Lights of Capitals</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem2.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Mirages</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem2.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Chocolatier</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem4.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Fire Lady</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem3.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Autumn New-York</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem2.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Ultra Violet</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem2.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Hip-Hop</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem4.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Warm Evening</span></a>
-                </li>
-                <li class="smallitem__item cell-3" style="background-image: url('divalore_files/smallitem_bg1.jpg');">
-                    <a class="smallitem__link" href=""><img src="divalore_files/smallitem3.jpg" alt="" class="smallitem__img"><span class="smallitem__text">Sommelier</span></a>
-                </li>
-            </ul>
-            <button class="button_more">Загрузить ещё <span class="arrow-down"></span></button>
-        </div>
-    </div>
-</section>
-
-  <section class="carousel">
-    <div class="carousel_container container">
-      <div class="carousel_leaders">
-        
-        <h1 class="section_title">Лидеры продаж</h1>
-        <span class="section_text">Наиболее популярные модели из всех категорий интернет-магазина</span>
-
-        <ul class="product__list">                  
-                      
-                <li class="product_wrap">
-                  <div class="product">
-                    <a class="product__img_wrap"  href="#">
-                        <img class="product__img" src="divalore_files/prod_1.png" alt=" " />
-                    </a>
-                    <div class="product__info_wrap">
-                      <span class="product__colection">Business Lady</span>
-                      <a class="product__link" href="#">Nartist 001 White 10g</a>
-                      <div class="product__price_block">
-                        <b class="product__price">300 р.</b>
-                      </div>
-                    </div>
-                    <div class="product__stick">-30%</div>
-                  </div>
-                </li>
-
-                <li class="product_wrap">
-                  <div class="product">
-                    <a class="product__img_wrap"  href="#">
-                        <img class="product__img" src="divalore_files/prod_2.png" alt=" " />
-                    </a>
-                    <div class="product__info_wrap">
-                      <span class="product__colection">Hip-Hop</span>
-                      <a class="product__link" href="#">Nartist 005 Misty Lilac 10g</a>
-                      <div class="product__price_block">
-                        <b class="product__price">300 р.</b>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li class="product_wrap">
-                  <div class="product">
-                    <a class="product__img_wrap"  href="#">
-                        <img class="product__img" src="divalore_files/prod_3.png" alt=" " />
-                    </a>
-                    <div class="product__info_wrap">
-                      <span class="product__colection">Business Lady</span>
-                      <a class="product__link" href="#">Nartist 001 White 10g</a>
-                      <div class="product__price_block">
-                        <b class="product__price">300 р.</b>
-                        <span class="product__price_old">400 р.</span>
-                      </div>
-                    </div>
-                    <div class="product__stick">-30%</div>
-                  </div>
-                </li>
-
-                <li class="product_wrap">
-                  <div class="product">
-                    <a class="product__img_wrap"  href="#">
-                        <img class="product__img" src="divalore_files/prod_4.png" alt=" " />
-                    </a>
-                    <div class="product__info_wrap">
-                      <span class="product__colection">Hip-Hop</span>
-                      <a class="product__link" href="#">NNartist 005 Misty Lilac 10g</a>
-                      <div class="product__price_block">
-                        <b class="product__price">300 р.</b>
-                        <span class="product__price_old">400 р.</span>
-                      </div>
-                    </div>
-                    <div class="product__stick">-30%</div>
-                  </div>
-                </li>
-
-                <li class="product_wrap">
-                  <div class="product">
-                    <a class="product__img_wrap"  href="#">
-                        <img class="product__img" src="divalore_files/prod_1.png" alt=" " />
-                    </a>
-                    <div class="product__info_wrap">
-                      <span class="product__colection">Business Lady</span>
-                      <a class="product__link" href="#">Nartist 001 White 10g</a>
-                      <div class="product__price_block">
-                        <b class="product__price">300 р.</b>
-                      </div>
-                    </div>
-                    <div class="product__stick">-30%</div>
-                  </div>
-                  <div class="product_hidden">
-                    <button class="product__fav bttn-favorite not-added" type="button" title="Добавить в избранное"></button>
-                    <a class="product__img_wrap"  href="#">
-                        <img class="product__img" src="divalore_files/prod_1.png" alt=" " />
-                    </a>
-                    <div class="product__info_wrap">
-                      <span class="product__colection">Business Lady</span>
-                      <a class="product__link" href="#">Nartist 001 White 10g</a>
-                      <div class="product__price_block">
-                        <b class="product__price">300 р.</b>
-                      </div>
-                    </div>
-                    <div class="product_buy_wrap">  
-                      <button class="product__buy">Купить</button>
-                      <a class="product__fastbuy" href="">Купить в один клик</a>
-                    </div>
-                  </div>
-                </li>
-
-        </ul>
-
-        <button class="button_more">Загрузить ещё <span class="arrow-down"></span></button>
+  <section class="greeting">
+    <div class="greeting__wrap container">
+      <h2 class="greeting__header">добро пожаловать <br> в магазин-ателье Di Valore</h2>
+      <div class="decor-divider"></div>
+      <p class="greeting__text">В нашем магазине Вы найдете одежду современного и актуального стиля, который подчеркивает индивидеальность каждого человека <br>
+          Также Вы можете подшить и подогнать уже купленный костюм до идеальной посадки</p>
+      <div class="divarication">
+        <div class="divarication__block">
+          <div class="divarication__wrap">
+            <figure class="divarication__icon"></figure>
+            <h3 class="divarication__title">оптовым клиентам</h3>
+            <span class="divarication__text">Индивидуальный подход к каждому партнеру, наиболее выгодные условия сотрудничества</span>
+            <a href="" class="divarication__button">зарегистрироваться</a>
+          </div>
+        </div> 
       </div>
-    </div>
-  </section>
-
-  <section class="collections">
-    <div class="collections_container container">
-      <div class="tabbed">
+      <div class="divarication">
+        <div class="divarication__block">
+          <div class="divarication__wrap">
+            <figure class="divarication__icon"></figure>
+            <h3 class="divarication__title">подобрать костюм</h3>
+            <span class="divarication__text">В нашем магазине Вы найдете одежду современного и актуального стиля, который подчеркивает индивидеальность каждого человека</span>
+          </div>
+        </div> 
+      </div>
+      <div class="divarication">
+        <div class="divarication__block">
+          <div class="divarication__wrap">
+            <figure class="divarication__icon"></figure>
+            <h3 class="divarication__title">подобрать аксессуары</h3>
+            <span class="divarication__text">В нашем магазине Вы найдете одежду современного и актуального стиля, который подчеркивает индивидеальность каждого человека</span>
+          </div>
+        </div> 
+      </div>
+      <div class="divarication">
+        <div class="divarication__block">
+          <div class="divarication__wrap">
+            <figure class="divarication__icon"></figure>
+            <h3 class="divarication__title">подогнать костюм по фигуре</h3>
+            <span class="divarication__text">Также Вы можете подшить и подогнать уже купленный костюм до идеальной посадки</span>
+            <a href="" class="divarication__button">оставить заявку</a>
+          </div>
+        </div> 
       </div>
     </div>
   </section>
 
   <section class="carousel">
-    <div class="carousel_container container">
-      <div class="carousel__newOffers">
+    <div class="carousel_collections container_narrow">
+      <h2>ИДЕАЛЬНЫЙ СОЮЗ ГАРМОНИИ И ЭЛЕГАНТНОСТИ</h2> 
+      <div class="decor-divider"></div>
+      <div class="swiper"></div>
+    </div>
+  </section>
+
+  <section class="action-block"> 
+    <div class="action-block__wrap container_narrow">
+      <div class="row">
+        <div class="cell-3">
+          <figure class="needle">
+          </figure>
+        </div>
+        <div class="cell-7">
+          <h3 class="action-block_title">Бесплатный укорот брюк при покупке костюма</h3>
+          <p class="action-block_text">При примерке нового костюма у нас в магазине наши консультанты подскажут, нужно что-либо менять в изделии либо нет. Вам больше не придется тратить время и силы на поиск достойной мастерской. Мастера салона сделают необходимую коррекцию в кратчайшие сроки. </p>
+          <a href="" class="action-block_link">Обновите гардероб без проблем</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="banner"> 
+    <div class="banner__wrap container">
+      <div class="half_left">
+        <div class="half__img_full"></div>
+        <div class="half__shadow">
+          <a href="" class="bttn_favorite"></a>
+          <h3 class="half__title">di valore</h3>
+          <p class="half__text1">ЭНЕРГИЯ, ДИНАМИЗМ И СТРАСТЬ: <br> ОКУНИСЬ В КОЛЛЕКЦИЮ оксфорд</p>
+        </div>
+      </div>
+      <div class="half_right">
+        <div class="half__img_framing">
+          <div class="half__img_full"></div>
+          <div class="half__shadow"> 
+            <p class="half__text2">Новая <br>  Элегантность</p>
+          </div>
+        </div>
       </div>
     </div>
   </section> 
 
-  <section class="instagram">
-    <div class="instagram_container container">
-      <div class="instagram__blocks_wrapper">
-      </div>
-    </div>
-  </section>
+  <section class="carousel">
+    <div class="carousel_collections container">
+      <h2>создай свой образ</h2> 
+      <div class="decor-divider"></div>
+      <div class="swiper tabbed"> 
+          <div class="tabs">
+              <input type="radio" name="tab" id="tab-1" checked="">
+              <label for="tab-1">воплощение элегантности</label>
+              <input type="radio" name="tab" id="tab-2">
+              <label for="tab-2">гармония цвета</label>
+              <input type="radio" name="tab" id="tab-3">
+              <label for="tab-3">праздничный выход</label>
+              <input type="radio" name="tab" id="tab-4">
+              <label for="tab-4">практичные решения</label> 
+              <div class="tabs-content">
+                  <div class="tab-1">
+                      <ul class="owl-carousel owl-loaded owl-drag"> 
+                      <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1565px;"><div class="owl-item active" style="width: 288px; margin-right: 25px;"><li class="product-slide"> 
+                              <div class="img-absolute">
+                                  <img src="static-insales.ru/img/models/model1.jpg" alt="Модель 2">
+                              </div>
+                              <div class="hover-cover">
+                              </div>
+                              <div class="img-relative">
+                                  <img src="static-insales.ru/img/models/model1.jpg" alt="Модель 2">
+                              </div>
+                              <img class="prod-flag" src="static-insales.ru/img/flag-ru.png" alt="flag russian">
+                              <span class="sticker">new</span>
+                              <div class="more-info-table">
+                                  <table>
+                                      <tbody><tr>
+                                          <td>Материал</td>
+                                          <td>Хлопок</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Сезон</td>
+                                          <td>Лето</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Страна-производитель</td>
+                                          <td> Франция</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Длина</td>
+                                          <td>Мини</td>
+                                      </tr>             
+                                  </tbody></table>
+                                  <a href="#"> Перейти в карточку</a>
+                              </div>
+                              <div class="product-sell">
+                                  <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                  </span>
+                                  <div class="product-size"> 
+                                      <input id="siz1mod1" type="radio" name="mod1" checked="">
+                                      <label for="siz1mod1">44</label>
+                                      <input id="siz2mod1" type="radio" name="mod1">
+                                      <label for="siz2mod1">46</label>
+                                      <input id="siz3mod1" type="radio" name="mod1">
+                                      <label for="siz3mod1">48</label> 
+                                      <input id="siz4mod1" type="radio" name="mod1">
+                                      <label for="siz4mod1">50</label>
+                                  </div>
+                                  <p class="product-price"> 
+                                      <span class="product-subtext">размер</span>
+                                      <b> 790 р. </b> 
+                                      <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                  </p>
+                              </div>
+                          </li></div><div class="owl-item active" style="width: 288px; margin-right: 25px;"><li class="product-slide"> 
+                              <div class="img-absolute">
+                                  <img src="static-insales.ru/img/models/model2.jpg" alt="Модель 2">
+                              </div>
+                              <div class="hover-cover">
 
-  <section class="decor">
-    <div class="decor_container container">
-      <div class="decor_wrapper">
-      </div>
-    </div>
-  </section>
+                              </div>
+                              <div class="img-relative">
+                                  <img src="static-insales.ru/img/models/model2.jpg" alt="Модель 2">
+                              </div>
+                              <img class="prod-flag" src="static-insales.ru/img/flag-esp.png" alt="flag russian">
+                              <span class="sticker">sale</span>
+                              <div class="product-sell">
+                                  <span class="product-info">
+                                      <h4 class="title">Платье в горох с поясом</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                  </span>
+                                  <div class="product-size"> 
+                                      <input id="siz1mod2" type="radio" name="mod2">
+                                      <label for="siz1mod2">46</label>
+                                  </div>
+                                  <p class="product-price"> 
+                                      <span class="product-subtext">размер</span>
+                                      <del>1190 р.</del><b> 790 р. </b> 
+                                      <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                  </p>
+                              </div>
+                          </li></div><div class="owl-item active" style="width: 288px; margin-right: 25px;"><li class="product-slide"> 
+                              <div class="img-absolute">
+                                  <img src="static-insales.ru/img/models/model3.jpg" alt="Модель 2">
+                              </div>
+                              <div class="hover-cover">
+                              </div>
+                              <div class="img-relative">
+                                  <img src="static-insales.ru/img/models/model3.jpg" alt="Модель 2">
+                              </div>
+                              <img class="prod-flag" src="static-insales.ru/img/flag-ru.png" alt="flag russian">
+                              <span class="sticker">new</span>
+                              <div class="product-sell">
+                                  <span class="product-info">
+                                      <h4 class="title">Розовое платье</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                  </span>
+                                  <div class="product-size"> 
+                                      <input id="siz1mod3" type="radio" name="mod3" checked="">
+                                      <label for="siz1mod3">44</label>
+                                      <input id="siz2mod3" type="radio" name="mod3">
+                                      <label for="siz2mod3">46</label>
+                                      <input id="siz3mod3" type="radio" name="mod3">
+                                      <label for="siz3mod3">48</label> 
+                                      <input id="siz4mod3" type="radio" name="mod3">
+                                      <label for="siz4mod3">50</label>
+                                  </div>
+                                  <p class="product-price"> 
+                                      <span class="product-subtext">размер</span>
+                                      <b> 790 р. </b> 
+                                      <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                  </p>
+                              </div>
+                          </li></div><div class="owl-item active" style="width: 288px; margin-right: 25px;"><li class="product-slide"> 
+                              <div class="img-absolute">
+                                  <img src="static-insales.ru/img/models/model4.jpg" alt="Модель 2">
+                              </div>
+                              <div class="hover-cover">
+                              </div>
+                              <div class="img-relative">
+                                  <img src="static-insales.ru/img/models/model4.jpg" alt="Модель 2">
+                              </div>
+                              <img class="prod-flag" src="static-insales.ru/img/flag-esp.png" alt="flag russian">
+                              <span class="sticker">sale</span>
+                              <div class="product-sell">
+                                  <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                  </span>
+                                  <div class="product-size"> 
+                                      <input id="siz1mod4" type="radio" name="mod4">
+                                      <label for="siz1mod4">44</label>
+                                      <input id="siz2mod4" type="radio" name="mod4">
+                                      <label for="siz2mod4">46</label>
+                                      <input id="siz3mod4" type="radio" name="mod4">
+                                      <label for="siz3mod4">48</label> 
+                                      <input id="siz4mod4" type="radio" name="mod4">
+                                      <label for="siz4mod4">50</label>
+                                      <input id="siz5mod4" type="radio" name="mod4">
+                                      <label for="siz5mod4">52</label>
+                                      <input id="siz6mod4" type="radio" name="mod4">
+                                      <label for="siz6mod4">54</label>
+                                  </div>
+                                  <p class="product-price">
+                                      <span class="product-subtext">размер</span>
+                                      <b> 790 р. </b> 
+                                      <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                  </p>
+                              </div>
+                          </li></div><div class="owl-item" style="width: 288px; margin-right: 25px;"><li class="product-slide"> 
+                              <div class="img-absolute">
+                                  <img src="static-insales.ru/img/models/model2.jpg" alt="Модель 2">
+                              </div>
+                              <div class="hover-cover">
+                              </div>
+                              <div class="img-relative">
+                                  <img src="static-insales.ru/img/models/model3.jpg" alt="Модель 2">
+                              </div>
+                              <img class="prod-flag" src="static-insales.ru/img/flag-esp.png" alt="flag russian">
+                              <span class="sticker">new</span>
+                              <div class="product-sell">
+                                  <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                  </span>
+                                  <div class="product-size"> 
+                                      <input id="siz1mod5" type="radio" name="mod5">
+                                      <label for="siz1mod5">44</label>
+                                      <input id="siz2mod5" type="radio" name="mod5">
+                                      <label for="siz2mod5">46</label>
+                                      <input id="siz3mod5" type="radio" name="mod5">
+                                      <label for="siz3mod5">48</label> 
+                                      <input id="siz4mod5" type="radio" name="mod5">
+                                      <label for="siz4mod5">50</label>
+                                  </div>
+                                  <p class="product-price"> <b> 790 р. </b> 
+                                      <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                  </p>
+                                  <span class="product-subtext">размер</span>
+                              </div>
+                          </li></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><span class="icon-long-arrow-left" aria-label="Previous"></span></button><button type="button"
+                                role="presentation" class="owl-next"><span class="icon-long-arrow-right" aria-label="Next"></span></button></div>
+                        <div class="owl-dots disabled"></div>
+                        </ul>
+                </div>
 
-  <section class="addLinks">
-    <div class="addLinks_container container">
-    </div>
-  </section>
+                <div class="tab-2">
+                    <ul class="owl-carousel owl-loaded owl-drag owl-hidden">
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.3s ease 0s; width: 2082px;">
+                                <div class="owl-item active" style="width: 391.25px; margin-right: 25px;">
+                                    <li class="product-slide">
+                                        <div class="img-absolute">
+                                            <img src="static-insales.ru/img/models/model2-1.jpg" alt="Модель 2">
+                                        </div>
+                                        <div class="hover-cover">
+                                        </div>
+                                        <div class="img-relative">
+                                            <img src="static-insales.ru/img/models/model2-1.jpg" alt="Модель 2">
+                                        </div>
+                                        <img class="prod-flag" src="static-insales.ru/img/flag-ru.png" alt="flag russian">
+                                        <span class="sticker">new</span>
+                                        <div class="more-info-table">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Материал</td>
+                                                        <td>Хлопок</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Сезон</td>
+                                                        <td>Лето</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Страна-производитель</td>
+                                                        <td> Франция</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Длина</td>
+                                                        <td>Мини</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a href="#"> Перейти в карточку</a>
+                                        </div>
+                                        <div class="product-sell">
+                                            <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                            </span>
+                                            <div class="product-size">
+                                                <input id="siz1mod1" type="radio" name="mod1" checked="">
+                                                <label for="siz1mod1">44</label>
+                                                <input id="siz2mod1" type="radio" name="mod1">
+                                                <label for="siz2mod1">46</label>
+                                                <input id="siz3mod1" type="radio" name="mod1">
+                                                <label for="siz3mod1">48</label>
+                                                <input id="siz4mod1" type="radio" name="mod1">
+                                                <label for="siz4mod1">50</label>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="product-subtext">размер</span>
+                                                <b> 790 р. </b>
+                                                <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="owl-item active" style="width: 391.25px; margin-right: 25px;">
+                                    <li class="product-slide">
+                                        <div class="img-absolute">
+                                            <img src="static-insales.ru/img/models/model2-2.jpg" alt="Модель 2">
+                                        </div>
+                                        <div class="hover-cover">
 
-  <footer class="nartistFooter">
-    <div class="anartistFooter_container container">
-      <div class="anartistFooter_row">
+                                        </div>
+                                        <div class="img-relative">
+                                            <img src="static-insales.ru/img/models/model2-2.jpg" alt="Модель 2">
+                                        </div>
+                                        <img class="prod-flag" src="static-insales.ru/img/flag-esp.png" alt="flag russian">
+                                        <span class="sticker">sale</span>
+                                        <div class="product-sell">
+                                            <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                            </span>
+                                            <div class="product-size">
+                                                <input id="siz1mod2" type="radio" name="mod2">
+                                                <label for="siz1mod2">46</label>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="product-subtext">размер</span>
+                                                <del>1190 р.</del><b> 790 р. </b>
+                                                <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="owl-item active" style="width: 391.25px; margin-right: 25px;">
+                                    <li class="product-slide">
+                                        <div class="img-absolute">
+                                            <img src="static-insales.ru/img/models/model2-3.jpg" alt="Модель 2">
+                                        </div>
+                                        <div class="hover-cover">
+                                        </div>
+                                        <div class="img-relative">
+                                            <img src="static-insales.ru/img/models/model2-3.jpg" alt="Модель 2">
+                                        </div>
+                                        <img class="prod-flag" src="static-insales.ru/img/flag-ru.png" alt="flag russian">
+                                        <span class="sticker">new</span>
+                                        <div class="product-sell">
+                                            <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                            </span>
+                                            <div class="product-size">
+                                                <input id="siz1mod3" type="radio" name="mod3" checked="">
+                                                <label for="siz1mod3">44</label>
+                                                <input id="siz2mod3" type="radio" name="mod3">
+                                                <label for="siz2mod3">46</label>
+                                                <input id="siz3mod3" type="radio" name="mod3">
+                                                <label for="siz3mod3">48</label>
+                                                <input id="siz4mod3" type="radio" name="mod3">
+                                                <label for="siz4mod3">50</label>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="product-subtext">размер</span>
+                                                <b> 790 р. </b>
+                                                <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="owl-item active" style="width: 391.25px; margin-right: 25px;">
+                                    <li class="product-slide">
+                                        <div class="img-absolute">
+                                            <img src="static-insales.ru/img/models/model2-4.jpg" alt="Модель 2">
+                                        </div>
+                                        <div class="hover-cover">
+                                        </div>
+                                        <div class="img-relative">
+                                            <img src="static-insales.ru/img/models/model2-4.jpg" alt="Модель 2">
+                                        </div>
+                                        <img class="prod-flag" src="static-insales.ru/img/flag-esp.png" alt="flag russian">
+                                        <span class="sticker">sale</span>
+                                        <div class="product-sell">
+                                            <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                            </span>
+                                            <div class="product-size">
+                                                <input id="siz1mod4" type="radio" name="mod4">
+                                                <label for="siz1mod4">44</label>
+                                                <input id="siz2mod4" type="radio" name="mod4">
+                                                <label for="siz2mod4">46</label>
+                                                <input id="siz3mod4" type="radio" name="mod4">
+                                                <label for="siz3mod4">48</label>
+                                                <input id="siz4mod4" type="radio" name="mod4">
+                                                <label for="siz4mod4">50</label>
+                                                <input id="siz5mod4" type="radio" name="mod4">
+                                                <label for="siz5mod4">52</label>
+                                                <input id="siz6mod4" type="radio" name="mod4">
+                                                <label for="siz6mod4">54</label>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="product-subtext">размер</span>
+                                                <b> 790 р. </b>
+                                                <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="owl-item" style="width: 391.25px; margin-right: 25px;">
+                                    <li class="product-slide">
+                                        <div class="img-absolute">
+                                            <img src="static-insales.ru/img/models/model2.jpg" alt="Модель 2">
+                                        </div>
+                                        <div class="hover-cover">
+                                        </div>
+                                        <div class="img-relative">
+                                            <img src="static-insales.ru/img/models/model3.jpg" alt="Модель 2">
+                                        </div>
+                                        <img class="prod-flag" src="static-insales.ru/img/flag-esp.png" alt="flag russian">
+                                        <span class="sticker">new</span>
+                                        <div class="product-sell">
+                                            <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                            </span>
+                                            <div class="product-size">
+                                                <input id="siz1mod5" type="radio" name="mod5">
+                                                <label for="siz1mod5">44</label>
+                                                <input id="siz2mod5" type="radio" name="mod5">
+                                                <label for="siz2mod5">46</label>
+                                                <input id="siz3mod5" type="radio" name="mod5">
+                                                <label for="siz3mod5">48</label>
+                                                <input id="siz4mod5" type="radio" name="mod5">
+                                                <label for="siz4mod5">50</label>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="product-subtext">размер</span>
+                                                <b> 790 р. </b>
+                                                <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><span class="icon-long-arrow-left" aria-label="Previous"></span></button><button type="button" role="presentation" class="owl-next"><span class="icon-long-arrow-right" aria-label="Next"></span></button></div>
+                        <div class="owl-dots disabled"></div>
+                    </ul>
+                </div>
 
-      </div>
-      <div class="anartistFooter_row">
-        <div class="anartistFooter_columns">
+                <div class="tab-3">
+                    <ul class="owl-carousel owl-loaded owl-drag owl-hidden">
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.3s ease 0s; width: 2082px;">
+                                <div class="owl-item active" style="width: 391.25px; margin-right: 25px;">
+                                    <li class="product-slide">
+                                        <div class="img-absolute">
+                                            <img src="static-insales.ru/img/models/model3-1.jpg" alt="Модель 2">
+                                        </div>
+                                        <div class="hover-cover">
+                                        </div>
+                                        <div class="img-relative">
+                                            <img src="static-insales.ru/img/models/model3-1.jpg" alt="Модель 2">
+                                        </div>
+                                        <img class="prod-flag" src="static-insales.ru/img/flag-ru.png" alt="flag russian">
+                                        <span class="sticker">new</span>
+                                        <div class="more-info-table">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Материал</td>
+                                                        <td>Хлопок</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Сезон</td>
+                                                        <td>Лето</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Страна-производитель</td>
+                                                        <td> Франция</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Длина</td>
+                                                        <td>Мини</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a href="#"> Перейти в карточку</a>
+                                        </div>
+                                        <div class="product-sell">
+                                            <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                            </span>
+                                            <div class="product-size">
+                                                <input id="siz1mod1" type="radio" name="mod1" checked="">
+                                                <label for="siz1mod1">44</label>
+                                                <input id="siz2mod1" type="radio" name="mod1">
+                                                <label for="siz2mod1">46</label>
+                                                <input id="siz3mod1" type="radio" name="mod1">
+                                                <label for="siz3mod1">48</label>
+                                                <input id="siz4mod1" type="radio" name="mod1">
+                                                <label for="siz4mod1">50</label>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="product-subtext">размер</span>
+                                                <b> 790 р. </b>
+                                                <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="owl-item active" style="width: 391.25px; margin-right: 25px;">
+                                    <li class="product-slide">
+                                        <div class="img-absolute">
+                                            <img src="static-insales.ru/img/models/model3-2.jpg" alt="Модель 2">
+                                        </div>
+                                        <div class="hover-cover">
+
+                                        </div>
+                                        <div class="img-relative">
+                                            <img src="static-insales.ru/img/models/model3-2.jpg" alt="Модель 2">
+                                        </div>
+                                        <img class="prod-flag" src="static-insales.ru/img/flag-esp.png" alt="flag russian">
+                                        <span class="sticker">sale</span>
+                                        <div class="product-sell">
+                                            <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                            </span>
+                                            <div class="product-size">
+                                                <input id="siz1mod2" type="radio" name="mod2">
+                                                <label for="siz1mod2">46</label>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="product-subtext">размер</span>
+                                                <del>1190 р.</del><b> 790 р. </b>
+                                                <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="owl-item active" style="width: 391.25px; margin-right: 25px;">
+                                    <li class="product-slide">
+                                        <div class="img-absolute">
+                                            <img src="static-insales.ru/img/models/model3-3.jpg" alt="Модель 2">
+                                        </div>
+                                        <div class="hover-cover">
+                                        </div>
+                                        <div class="img-relative">
+                                            <img src="static-insales.ru/img/models/model3-3.jpg" alt="Модель 2">
+                                        </div>
+                                        <img class="prod-flag" src="static-insales.ru/img/flag-ru.png" alt="flag russian">
+                                        <span class="sticker">new</span>
+                                        <div class="product-sell">
+                                            <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                            </span>
+                                            <div class="product-size">
+                                                <input id="siz1mod3" type="radio" name="mod3" checked="">
+                                                <label for="siz1mod3">44</label>
+                                                <input id="siz2mod3" type="radio" name="mod3">
+                                                <label for="siz2mod3">46</label>
+                                                <input id="siz3mod3" type="radio" name="mod3">
+                                                <label for="siz3mod3">48</label>
+                                                <input id="siz4mod3" type="radio" name="mod3">
+                                                <label for="siz4mod3">50</label>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="product-subtext">размер</span>
+                                                <b> 790 р. </b>
+                                                <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="owl-item active" style="width: 391.25px; margin-right: 25px;">
+                                    <li class="product-slide">
+                                        <div class="img-absolute">
+                                            <img src="static-insales.ru/img/models/model3-4.jpg" alt="Модель 2">
+                                        </div>
+                                        <div class="hover-cover">
+                                        </div>
+                                        <div class="img-relative">
+                                            <img src="static-insales.ru/img/models/model3-4.jpg" alt="Модель 2">
+                                        </div>
+                                        <img class="prod-flag" src="static-insales.ru/img/flag-esp.png" alt="flag russian">
+                                        <span class="sticker">sale</span>
+                                        <div class="product-sell">
+                                            <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                            </span>
+                                            <div class="product-size">
+                                                <input id="siz1mod4" type="radio" name="mod4">
+                                                <label for="siz1mod4">44</label>
+                                                <input id="siz2mod4" type="radio" name="mod4">
+                                                <label for="siz2mod4">46</label>
+                                                <input id="siz3mod4" type="radio" name="mod4">
+                                                <label for="siz3mod4">48</label>
+                                                <input id="siz4mod4" type="radio" name="mod4">
+                                                <label for="siz4mod4">50</label>
+                                                <input id="siz5mod4" type="radio" name="mod4">
+                                                <label for="siz5mod4">52</label>
+                                                <input id="siz6mod4" type="radio" name="mod4">
+                                                <label for="siz6mod4">54</label>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="product-subtext">размер</span>
+                                                <b> 790 р. </b>
+                                                <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="owl-item" style="width: 391.25px; margin-right: 25px;">
+                                    <li class="product-slide">
+                                        <div class="img-absolute">
+                                            <img src="static-insales.ru/img/models/model2.jpg" alt="Модель 2">
+                                        </div>
+                                        <div class="hover-cover">
+                                        </div>
+                                        <div class="img-relative">
+                                            <img src="static-insales.ru/img/models/model3.jpg" alt="Модель 2">
+                                        </div>
+                                        <img class="prod-flag" src="static-insales.ru/img/flag-esp.png" alt="flag russian">
+                                        <span class="sticker">new</span>
+                                        <div class="product-sell">
+                                            <span class="product-info">
+                                      <h4 class="title">Кожаная юбка</h4>
+                                      <span class="text">Описание: Полосатая кофта из полосатого трикотажа, без молнии</span>
+                                            </span>
+                                            <div class="product-size">
+                                                <input id="siz1mod5" type="radio" name="mod5">
+                                                <label for="siz1mod5">44</label>
+                                                <input id="siz2mod5" type="radio" name="mod5">
+                                                <label for="siz2mod5">46</label>
+                                                <input id="siz3mod5" type="radio" name="mod5">
+                                                <label for="siz3mod5">48</label>
+                                                <input id="siz4mod5" type="radio" name="mod5">
+                                                <label for="siz4mod5">50</label>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="product-subtext">размер</span>
+                                                <b> 790 р. </b>
+                                                <a href="#" class="buy-button"><i class="icon-cart"></i></a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><span class="icon-long-arrow-left" aria-label="Previous"></span></button><button type="button" role="presentation" class="owl-next"><span class="icon-long-arrow-right" aria-label="Next"></span></button></div>
+                        <div class="owl-dots disabled"></div>
+                    </ul>
+                </div>
+            </div>
 
         </div>
-      </div>
-    </div>
-    <script src="divalore_files/jquery.js"></script>
-    <script src="divalore_files/nartist.js"></script>
-  </footer>
+        </div>
+        </div>
+        </section>
+
+
+        <section class="action-block">
+            <div class="action-block__wrap container_narrow">
+                <div class="row">
+                    <div class="cell-3">
+                        <figure class="trousers">
+                        </figure>
+                    </div>
+                    <div class="cell-7">
+                        <h3 class="action-block_title">Купите две пары брюк и получите третьи в подарок</h3>
+                        <p class="action-block_text">При примерке нового костюма у нас в магазине наши консультанты подскажут, нужно что-либо менять в изделии либо нет. Вам больше не придется тратить время и силы на поиск достойной мастерской. Мастера салона сделают необходимую коррекцию
+                            в кратчайшие сроки. </p>
+                        <a href="" class="action-block_link">Обновите гардероб без проблем</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="banner">
+            <div class="banner__wrap container_wide">
+                <div class="half_left">
+                    <div class="half__img_wide"></div>
+                    <div class="half__shadow">
+                    </div>
+                    <a href="" class="button1">перейти в каталог</a>
+                    <div class="half_title2">стильные аксессуары к вашему образу</div>
+                </div>
+                <div class="half_right">
+                    <div class="half__img_wide"></div>
+                    <div class="half__shadow">
+                    </div>
+                    <a href="" class="button1">узнать больше</a>
+                    <div class="half_title2">наш магазин-ателье</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="icons">
+            <div class="icons_wrap container">
+                <div class="icon__list">
+                    <div class="icon__item">
+                        <figure class="icon"></figure>
+                        <span class="icon__signature">Признание более 1 миллиона клиентов
+      по всей России</span>
+                    </div>
+                    <div class="icon__item">
+                        <figure class="icon"></figure>
+                        <span class="icon__signature">Размерный ряд от 46 до 64</span>
+                    </div>
+                    <div class="icon__item">
+                        <figure class="icon"></figure>
+                        <span class="icon__signature">Classic, Casual, Smart, Sport –
+      не ограничивайте себя одним стилем!</span>
+                    </div>
+                    <div class="icon__item">
+                        <figure class="icon"></figure>
+                        <span class="icon__signature">Возможность сформировать
+      готовый образ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="instagram">
+            <div class="instagram__wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="cell-8">
+                            <h5 class="instagram__header">follow <br> us in <br> instagram</h5>
+                            <div class="instagram__icon">@divalore.ru</div>
+                            <span class="instagram__text">
+        <p class="uppercase">Узнавайте обо всех новинках и промоакциях</b>
+        </span>
+                            <span class="instagram__text">
+        <p>
+          Ваши персональные данные будут обработаны для предоставления запрошенной Вами услуги новостной рассылки <br>
+          Мы гарантируем безопасность Ваших данных
+        </p>
+      </span>
+                            <form action="">
+                                <input class="text1" type="text" value="ваш email">
+                                <button class="button1">подписаться</button>
+                            </form>
+                        </div>
+                        <div class="cell-4">
+                            <img src="" alt="" class="instagram__img">
+                            <img src="" alt="" class="instagram__img">
+                            <img src="" alt="" class="instagram__img">
+                            <img src="" alt="" class="instagram__img">
+                            <img src="" alt="" class="instagram__img">
+                            <img src="" alt="" class="instagram__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="addHelp">
+            <div class="container">
+                <h2 class="addHelp__title">Мы можем вам помочь?</h2>
+                <div class="decor-divider white"></div>
+                <span class="addHelp__text">Телефон: +7 (495) 123 45 67</span>
+                <span class="addHelp__text">С понедельника по пятницу, с 11:00 до 21:00</span>
+            </div>
+        </section>
+
+        <section class="addLinks">
+            <div class="container">
+                <h2 class="addLinks__name push-1">di valore</h2>
+                <div class="row">
+                    <ul class="addLinks__column push-1 cell-2">
+                        <li class="addLinks__title">компания</li>
+                        <li class="addLinks__link">Оформление заказа</li>
+                        <li class="addLinks__link">Доставка товара</li>
+                        <li class="addLinks__link">Способы оплаты</li>
+                        <li class="addLinks__link">Возврат</li>
+                        <li class="addLinks__link">Карта сайта</li>
+                    </ul>
+                    <ul class="addLinks__column cell-2">
+                        <li class="addLinks__title">Помощь</li>
+                        <li class="addLinks__link">Оформление заказа</li>
+                        <li class="addLinks__link">Доставка товара</li>
+                        <li class="addLinks__link">Способы оплаты</li>
+                        <li class="addLinks__link">Возврат</li>
+                        <li class="addLinks__link">Карта сайта</li>
+                    </ul>
+                    <ul class="addLinks__column cell-2">
+                        <li class="addLinks__title">информация</li>
+                        <li class="addLinks__link">о нас</li>
+                        <li class="addLinks__link">отзывы</li>
+                        <li class="addLinks__link">контакты</li>
+                        <li class="addLinks__link">доставка</li>
+                    </ul>
+                    <ul class="addLinks__column cell-5">
+                        <li class="addLinks__title">Ателье и шоурум находятся по адресу:</li>
+                        <li class="addLinks__link">Москва, Большой Козихинский переулок, 22/2, офис 49</li>
+                        <li class="addLinks__link">Москва, Метро Павелецкая, ул. Кожевническая, д. 1 с1, офис 603</li>
+                        <li class="addLinks__link">Москва, Ветошный переулок, д. 9. ТЦ Никольский Пассаж, 5 этаж</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="divaloreFooter">
+            <div class="footer__map">
+                <div class="footer-map_container ">
+                </div>
+            </div>
+
+            <div class="divaloreFooter_container container">
+                <div class="row">
+                    <div class="cell-4">
+                        <p class="column__name">оплата</p>
+                        <span><i class="visa_icon"></i><i class="visa_icon"></i><i class="visa_icon"></i><i class="visa_icon"></i><i class="visa_icon"></i><i class="visa_icon"></i> </span>
+                    </div>
+                    <div class="cell-4">
+                        <p class="column__name">мы в соцсетях</p>
+                        <span><i class="inst_icon"></i> </span>
+                        <span><i class="face_icon"></i> </span>
+                        <span><i class="vk_icon"></i> </span>
+                    </div>
+                    <div class="cell-4">
+                        <p class="column__name">whats app чат</p>
+                        <span><i class="whatsup_icon"></i> +7 (915) 412 42 00 </span>
+                    </div>
+                </div>
+                <div class="row">
+                    Copyright © 2020 DiValore Все права защищены. Powered by <a href="">IDBI</a>
+                </div>
+                <div class="js-to-top"></div>
+            </div>
+            <script src="divalore_files/jquery.js"></script>
+            <script src="divalore_files/divalore.js"></script>
+            <script src="divalore_files/swiper.min.js"></script>
+
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    effect: 'coverflow',
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 80,
+                        depth: 200,
+                        modifier: 1,
+                        slideShadows: true,
+                    }, 
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    loop: true,
+                    centeredSlides: true,
+                    loopAdditionalSlides: 3,
+                    navigation: {
+                      nextEl: '.swiper-button-next',
+                      prevEl: '.swiper-button-prev',
+                    },
+                    breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                      slidesPerView: 1, 
+                    },
+                    // when window width is >= 480px
+                    480: {
+                      slidesPerView: 1, 
+                    },
+                    // when window width is >= 640px
+                    640: {
+                      slidesPerView: 1, 
+                    }
+                  }
+                });
+            </script>
+        </footer>
 </body>
+
 </html>
